@@ -6,43 +6,42 @@ function Applicant(age, written, driving) {
   this.driving = driving;
 }
 
-Applicant.prototype.age = function() {
-  if (age >= 18) {
+Applicant.prototype.userAge = function() {
+  var minAge = 18;
+  if (this.age >= minAge) {
     return true;
   } else {
     return false;
   }
-}
+};
 
-Applicant.prototype.written = function() {
-  if (written >= 14) {
+Applicant.prototype.userWritten = function() {
+  var maxWritten = 20;
+  var difference = (maxWritten - this.written);
+  if (difference >= 6) {
     return true;
   } else {
     return false;
   }
-}
+};
 
-Applicant.prototype.driving = function() {
-  if (driving >= 14) {
+Applicant.prototype.userDriving = function() {
+  var maxDriving = 30;
+  var difference = (maxDriving - this.driving);
+  if (difference >= 9) {
     return true;
   } else {
     return false;
   }
+};
+
+function AuditDMV() {
+  var newApplicant = new Applicant(18, 11, 22);
+  newApplicant.userAge();
+  newApplicant.userWritten();
+  newApplicant.userDriving();
 }
 
-var newApplicant = new Applicant(15, 14, 8);
-console.log(newApplicant);
-
-function DmvAudit() {
-  this.eligibility = false;
-}
-
-DmvAudit.prototype.addApplicant = function(Applicant) {
-  this.inspection.push(new Applicant(age, written, driving));
-}
-
-DmvAudit.prototype.report = function() {
-  if ()
-}
+AuditDMV();
 
 </script>
