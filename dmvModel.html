@@ -1,0 +1,48 @@
+<script>
+
+function Applicant(age, written, driving) {
+  this.age = age;
+  this.written = written;
+  this.driving = driving;
+}
+
+Applicant.prototype.age = function() {
+  if (age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+Applicant.prototype.written = function() {
+  if (written >= 14) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+Applicant.prototype.driving = function() {
+  if (driving >= 14) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+var newApplicant = new Applicant(15, 14, 8);
+console.log(newApplicant);
+
+function DmvAudit() {
+  this.eligibility = false;
+}
+
+DmvAudit.prototype.addApplicant = function(Applicant) {
+  this.inspection.push(new Applicant(age, written, driving));
+}
+
+DmvAudit.prototype.report = function() {
+  if ()
+}
+
+</script>
