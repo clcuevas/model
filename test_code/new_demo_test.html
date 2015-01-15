@@ -1,0 +1,33 @@
+<script>
+
+function Applicant(name, age, writing, driving) {
+  this.name = name;
+  this.age = age;
+  this.writing = writing;
+  this.driving = driving;
+}
+
+Applicant.prototype.summary = function() {
+  console.log("I am " + this.name + " who is requesting a Driver's License to be issued to me. My age is " + this.age + ". My test scores are as follows: " + this.writing + ", " + this.driving + ".");
+}
+// function can be named 'Que' too
+function Inventory() {
+  this.applicant = [];
+}
+
+// linking Applicant object to Inventory (addApplicant is a method)
+Inventory.prototype.addApplicant = function(name, age, writing, driving) {
+  this.applicant.push(new Applicant(name, age, writing, driving));
+}
+
+Inventory.prototype.listApplicant = function() {
+  for (var i = 0; i < this.applicant.length; i++) {
+    this.applicant[i].summary();
+  }
+}
+
+var inventory = new Inventory();
+inventory.addApplicant("Tom", 18, 14, 20);
+inventory.addApplicant("Sam", 19, 16, 26);
+inventory.listApplicant();
+</script>
