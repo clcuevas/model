@@ -11,27 +11,19 @@ Application.prototype.summary = function() {
   console.log("I am " + this.name + " who is requesting a Driver's License to be issued to me. My age is " + this.age + ". My test scores are as follows: " + this.writing + ", " + this.driving + ".");
 }
 
-Application.prototype.grade = function() {
-  var minAge, maxWritingScore, maxDrivingScore;
+Application.prototype.grade = function(name, age, writing, driving) {
+  var minAge, maxWritingScore, maxDrivingScore, communication;
   minAge = 18;
   minWritingScore = 14;
   minDrivingScore = 20;
-  if (this.age >= minAge) {
-    console.log("You passed your age!!");
+  if ((age >= minAge) && (writing >= minWritingScore) && (driving >= minDrivingScore)) {
+    communication = ("Congratulations! You've met all requirements. Click Continue to finalize your application.");
   } else {
-    console.log("You failed your age!");
+    communication = ("I'm sorry. You haven't met the qualifications to apply for a Driver's License. Please Contact Us for more information.");
   }
-  if (this.writing >= minWritingScore) {
-    console.log("You passed the Writing Test!!");
-  } else {
-    console.log("You failed the Writing Test.");
-  }
-  if (this.driving >= minDrivingScore) {
-    console.log("You passed the Driving Test");
-  } else {
-    console.log("You failed the Driving Test.")
-  }
+  return communication;
 }
+
 // function can be named 'Que' too
 function Inventory() {
   this.application = [];
@@ -49,10 +41,24 @@ Inventory.prototype.listApplication = function() {
   }
 }
 
+var button = document.getElementById("submit");
+var summary = document.getElementById("outputResult");
 
+function Operator() {
+  var applicantName = document.getElementById("name").value;
+  var applicantAge = document.getElementById("age").value;
+  var applicantWritingScore = document.getElementById("written").value;
+  var applicantDrivingScore = document.getElementById("driver").value;
+  var inventory = new Inventory();
+  inventory.listApplication();
+  var msg = inventory.grade();
+  summary.innerHTML = msg;
+}
 
-var inventory = new Inventory();
-inventory.addApplication("Tom", 18, 14, 20);
-inventory.addApplication("Sam", 14, 16, 5);
-inventory.listApplication();
+button.addEventListener('click', Operator, false);
+
+// var inventory = new Inventory();
+// inventory.addApplication("Tom", 18, 14, 20);
+// inventory.addApplication("Sam", 14, 16, 5);
+// inventory.listApplication();
 </script>
