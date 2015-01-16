@@ -10,6 +10,28 @@ function Application(name, age, writing, driving) {
 Application.prototype.summary = function() {
   console.log("I am " + this.name + " who is requesting a Driver's License to be issued to me. My age is " + this.age + ". My test scores are as follows: " + this.writing + ", " + this.driving + ".");
 }
+
+Application.prototype.grade = function() {
+  var minAge, maxWritingScore, maxDrivingScore;
+  minAge = 18;
+  minWritingScore = 14;
+  minDrivingScore = 20;
+  if (this.age >= minAge) {
+    console.log("You passed your age!!");
+  } else {
+    console.log("You failed your age!");
+  }
+  if (this.writing >= minWritingScore) {
+    console.log("You passed the Writing Test!!");
+  } else {
+    console.log("You failed the Writing Test.");
+  }
+  if (this.driving >= minDrivingScore) {
+    console.log("You passed the Driving Test");
+  } else {
+    console.log("You failed the Driving Test.")
+  }
+}
 // function can be named 'Que' too
 function Inventory() {
   this.application = [];
@@ -23,11 +45,14 @@ Inventory.prototype.addApplication = function(name, age, writing, driving) {
 Inventory.prototype.listApplication = function() {
   for (var i = 0; i < this.application.length; i++) {
     this.application[i].summary();
+    this.application[i].grade();
   }
 }
 
+
+
 var inventory = new Inventory();
 inventory.addApplication("Tom", 18, 14, 20);
-inventory.addApplication("Sam", 19, 16, 26);
+inventory.addApplication("Sam", 14, 16, 5);
 inventory.listApplication();
 </script>
