@@ -9,7 +9,7 @@
     Dark Gray:      #333333
     Gray:           #444444
     Light Gray:     #eeeeee
-    Light Blue:     #00c0ff
+    Main Page:      #2980b9
     Dark Blue:      #0090bf
 
 */
@@ -35,7 +35,7 @@ header {
 }
 
 .hero {
-    background: #00c0ff;
+    background: #2980b9;
     color: #000;
 }
 
@@ -74,6 +74,11 @@ ol.lead {
 
 #content {
     padding: 100px 0;
+}
+
+.status-img {
+    margin-top: -60px;
+    margin-bottom: 30px;
 }
 
 .column-content {
