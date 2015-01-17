@@ -12,30 +12,25 @@ function Inventory() {
 }
 
 Inventory.prototype.grade = function() {
-  var minAge, maxWritingScore, maxDrivingScore; //agePrint, scorePrint;
+  var minAge, maxWritingScore, maxDrivingScore, passMsg, outputResult, resultMsg, outputDetails, requirementMsg;
   minAge = 18;
   minWritingScore = 14;
   minDrivingScore = 20;
   var SCORE= function() {
-  if ((document.getElementById("age").value >= minAge) && (document.getElementById("written").value >= minWritingScore) && (document.getElementById("driver").value >= minDrivingScore)) {
-    return "passed";
-  } else {
-    return "failed";
+    if ((document.getElementById("age").value >= minAge) && (document.getElementById("written").value >= minWritingScore) && (document.getElementById("driver").value >= minDrivingScore)) {
+      return "passed";
+    } else {
+      return "failed";
+    }
   }
-}
-var msg = document.getElementById("name").value + " you " + SCORE() + " the requirements!";
-
-var outputName           = document.getElementById("outputName");
-outputName.innerHTML     = "Your name is " + document.getElementById("name").value;  
-var outputAge            = document.getElementById("outputAge");
-outputAge.innerHTML      = "Your age is " + document.getElementById("age").value;
-var outputDriving        = document.getElementById("outputDriving");
-outputDriving.innerHTML  ="Your driver test score is " + document.getElementById("driver").value;
-var outputWriting        = document.getElementById("outputWritten");
-outputWriting.innerHTML  = "Your driver test score is " + document.getElementById("written").value;
-var outputResult         = document.getElementById("outputResult");
-outputResult.innerHTML   = msg;
-
+  passMsg                 = document.getElementById("name").value + ", you " + SCORE() + " the requirements!";
+  outputResult            = document.getElementById("outputResult");
+  outputResult.innerHTML  = passMsg;
+  resultMsg               = document.getElementById("name").value + ", age " + document.getElementById("age").value + ", drive test score " + document.getElementById("driver").value + " and knowledge test score " + document.getElementById("written").value + ".";
+  outputDetails           = document.getElementById("outputDetails");
+  outputDetails.innerHTML = resultMsg;
+  requirementMsg          = document.getElementById("outputRequirements");
+  requirementMsg.innerHTML= "To pass the requirements, you need to be 18 or older, and score at least 14 points in the knowledge test and 20 points in the drive test."
 }
 
 // linking Applicant object to Inventory (addApplicant is a method)
