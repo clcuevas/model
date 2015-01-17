@@ -1,15 +1,24 @@
 <!DOCTYPE>
 	<html>
 		<head>
-			<title>Eligibility </title>
-			<!--<link type="text/css" rel="stylesheet" href="style2.css"> -->
+			<title>Check if you're eligible</title>
+			<link type="text/css" rel="stylesheet" href="style.css">
 		</head>
 		<body>
 			<header>
-				<h1>Check your eligibility for a driver's license.</h1>
-				<p>Please add your age, driver's test score and your writing test score to find out if you fill the requirements for a driver's license.</p>
+				<h1>Check your eligibility for a driver's license here!</h1>
 			</header>
 			<main>
+				<section>
+					<p>This is the information that we need from you:</p>
+					<ol>
+						<li>Your name</li>
+						<li>Your age</li>
+						<li>Your score on drive test</li>
+						<li>Your score on knowledge test</li>
+					</ol>
+					<p>Please fill out the information below and click Submit.</p>
+				</section>
 				<section>
 					<form>
 						<div>Name: <input placeholder="Your name" type="text" id="name" name="name" ></div>
@@ -20,16 +29,14 @@
 					<button id="submit">Submit</button>
 				</section>
 				<section>
-					<h2>Your results:</h2>
-					<p><span id="outputName"</p>
-	        <p><span id="outputAge"</p>
-	        <p><span id="outputDriving" ></span></p>
-	        <p><span id="outputWritten" ></span></p>
-	        <p><span id="outputResult"></span></p>
+					<h2>Your results are here:</h2>
+					<p><span id="outputResult"></span></p>
+					<p><span id="outputDetails"></span></p>
+					<p><span id="outputRequirements"></span></p>
 				</section>	
 			</main>
 			<footer>
-				<button href="/index.html">Back to the main page</button>
+				<button href="/index.html">Back to the home page</button>
 				<script type="text/javascript" src="dmvModel.js"></script>
 			</footer>
 		</body>
