@@ -73,6 +73,13 @@ input[type=text], input[type=email] {
     margin: 0 -5px 0 0;
 }
 
+input.form {
+    position: relative;
+    padding: 5px 5px;
+    border: solid 1px #ccc;
+    margin: 0;
+}
+
 .column {
     float: left;
     margin-right: 20px;
