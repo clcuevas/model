@@ -52,7 +52,7 @@ function Operator() {
   var driving = document.getElementById("driver").value;
   var inventory = new Inventory();
   inventory.listApplication();
-  var msg = Inventory.prototype.grade(name, age, writing, driving);
+  var msg = inventory.grade(name, age, writing, driving);
   summary.innerHTML = msg;
 }
 
