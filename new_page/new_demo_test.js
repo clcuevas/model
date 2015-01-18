@@ -1,15 +1,9 @@
-
-
 function Application(name, age, writing, driving) {
   this.name = name;
   this.age = age;
   this.writing = writing;
   this.driving = driving;
 }
-
-// Application.prototype.summary = function() {
-//   console.log("I am " + this.name + " who is requesting a Driver's License to be issued to me. My age is " + this.age + ". My test scores are as follows: " + this.writing + ", " + this.driving + ".");
-// }
 
 // function can be named 'Que' too
 function Inventory() {
@@ -34,9 +28,9 @@ Inventory.prototype.grade = function(name, age, writing, driving) {
   minWritingScore = 14;
   minDrivingScore = 20;
   if ((age >= minAge) && (writing >= minWritingScore) && (driving >= minDrivingScore)) {
-    communication = ("Congratulations! You've met all requirements. Click Continue to finalize your application.");
+    communication = ("Congratulations! You've met all requirements. Contact us to finalize your application!");
   } else {
-    communication = ("I'm sorry. You haven't met the qualifications to apply for a Driver's License. Please Contact Us for more information.");
+    communication = ("I'm sorry. You haven't met the qualifications to apply for a Driver's License. Please contact us for more information.");
   }
   return communication;
 }
@@ -44,6 +38,7 @@ Inventory.prototype.grade = function(name, age, writing, driving) {
 var button = document.getElementById("submit");
 var summary = document.getElementById("outputResult");
 var clear = document.getElementById('clear');
+var more = document.getElementById("more");
 
 function Operator() {
   var name = document.getElementById("name").value;
@@ -54,13 +49,10 @@ function Operator() {
   inventory.listApplication();
   var msg = inventory.grade(name, age, writing, driving);
   summary.innerHTML = msg;
+  more.innerHTML = "Summary: your name is: " + document.getElementById("name").value + ", your age is: " + document.getElementById("age").value + ", your driving test score is: " + document.getElementById("driver").value + " and your knowledge test score is: " + document.getElementById("written").value + ".";
 }
 
 button.addEventListener('click', Operator, false);
 clear.addEventListener('click', function() {
   history.go(0);
 }, false);
-// var inventory = new Inventory();
-// inventory.addApplication("Tom", 18, 14, 20);
-// inventory.addApplication("Sam", 14, 16, 5);
-// inventory.listApplication();

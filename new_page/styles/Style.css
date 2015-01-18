@@ -86,7 +86,21 @@ ol.lead {
     float: left;
 }
 
+.contact {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
 
+.img-left {
+    float: right;
+    display: inline-block;
+    margin-top: 63px;
+    margin-right: 130px;
+}
+
+.summary{
+    margin-top: 20px;
+}
 
 /* **********************
     Sidebar
