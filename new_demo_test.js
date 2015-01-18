@@ -39,6 +39,12 @@ var button = document.getElementById("submit");
 var summary = document.getElementById("outputResult");
 var clear = document.getElementById('clear');
 var more = document.getElementById("more");
+var requirements = document.getElementById("requirements");
+
+function showRequirements() {
+  var outputRequirements = document.getElementById("outputRequirements");
+  outputRequirements.innerHTML = "You have to be older than 18, you have to have minimum score of 14 from the knowledge test and a minimum score of 20 from the driving test.";
+}
 
 function Operator() {
   var name = document.getElementById("name").value;
@@ -56,3 +62,4 @@ button.addEventListener('click', Operator, false);
 clear.addEventListener('click', function() {
   history.go(0);
 }, false);
+requirements.addEventListener('click', showRequirements, false);
