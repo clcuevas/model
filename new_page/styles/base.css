@@ -18,13 +18,13 @@ body {
     Typography
     ********************** */
 
-h1, h2, h3 {
+h1, h2 {
     font-weight: 300;
     margin: 0;
     line-height: 45px;
 }
 
-h4, h5, h6 {
+h3, h5 {
     font-weight: bold;
     margin: 5px 0 5px 0;
 }
@@ -37,11 +37,11 @@ h2 {
     font-size: 24px;
 }
 
-h3 {
+/*h3 {
     font-size: 30px;
-}
+}*/
 
-h4 {
+h3 {
     font-size: 18px;
     margin: 10px 0;
 }
