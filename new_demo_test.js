@@ -28,9 +28,9 @@ Inventory.prototype.grade = function(name, age, writing, driving) {
   minWritingScore = 14;
   minDrivingScore = 20;
   if ((age >= minAge) && (writing >= minWritingScore) && (driving >= minDrivingScore)) {
-    communication = ("Congratulations! You've met all requirements. Contact us to finalize your application!");
+    communication = ("<strong>Congratulations!</strong> You've met all requirements. Contact us to finalize your application!");
   } else {
-    communication = ("I'm sorry. You haven't met the qualifications to apply for a Driver's License. Please contact us for more information.");
+    communication = ("<strong>I'm sorry. You haven't met the qualifications to apply for a Driver's License</strong>. Please contact us for more information.");
   }
   return communication;
 }
@@ -55,7 +55,7 @@ function Operator() {
   inventory.listApplication();
   var msg = inventory.grade(name, age, writing, driving);
   summary.innerHTML = msg;
-  more.innerHTML = "Summary: your name is: " + document.getElementById("name").value + ", your age is: " + document.getElementById("age").value + ", your driving test score is: " + document.getElementById("driver").value + " and your knowledge test score is: " + document.getElementById("written").value + ".";
+  more.innerHTML = "<strong>Summary</strong>: your name is: " + document.getElementById("name").value + ", your age is: " + document.getElementById("age").value + ", your driving test score is: " + document.getElementById("driver").value + " and your knowledge test score is: " + document.getElementById("written").value + ".";
 }
 
 button.addEventListener('click', Operator, false);
@@ -63,3 +63,4 @@ clear.addEventListener('click', function() {
   history.go(0);
 }, false);
 requirements.addEventListener('click', showRequirements, false);
+
