@@ -1,0 +1,108 @@
+/* ***********************
+    General Styles
+    ********************** */
+
+html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #444444;
+}
+
+/* ***********************
+    Typography
+    ********************** */
+
+h1, h2 {
+    font-weight: 300;
+    margin: 0;
+    line-height: 45px;
+}
+
+h3, h5 {
+    font-weight: bold;
+    margin: 5px 0 5px 0;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/*h3 {
+    font-size: 30px;
+}*/
+
+h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+h5 {
+    font-size: 13px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0 0 10px 0;
+}
+
+/* ***********************
+    Global Styles
+    ********************** */
+
+input {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+input[type=text], input[type=email] {
+    position: relative;
+    padding: 10px 10px 11px;
+    border: solid 1px #ccc;
+    width: 220px;
+    margin: 0 -5px 0 0;
+}
+
+input.form {
+    position: relative;
+    padding: 5px 5px;
+    border: solid 1px #ccc;
+    margin: 0;
+}
+
+.column {
+    float: left;
+    margin-right: 20px;
+}
+
+.four {
+    width: 220px;
+}
+
+.last {
+    margin-right: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */ 
+}
