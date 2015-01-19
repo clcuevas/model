@@ -11,6 +11,6 @@ Based on information given, the online simulator will tell the applicants whethe
 2. Has this individual passed their written exam?
 3. Has this individual passed their driving exam?
 
-If all these requirements have been met, then the DMV office will approve this individual for a new license. 
+If all these requirements have been met, then the tool will notify the individual that they qualify for a Driver's license. The individual must meet all three requirements to be approved. If they do not meet these requirements, they will be notified of this and will also have a button they can click that will display these requirements. We have also given the individual the option to 'Contact Us' for further information, etc.
 
 ![Plan](model.jpg "UML")
